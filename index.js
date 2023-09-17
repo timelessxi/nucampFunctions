@@ -1,12 +1,11 @@
-const express = require("express");
-
+const express = require('express');
 const app = express();
-app.use(express.json());
-const campsiteRouter = require("./routes/campsiteRouter");
-app.use("/campsites", campsiteRouter);
+const campsiteRouter = require('./routes/campsiteRouter');
+app.use('/campsites', campsiteRouter);
 app.use((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/html");
-  res.end("This is an Express Server");
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('This is an Express Server');
 });
+
 exports.myExpressApp = app;
